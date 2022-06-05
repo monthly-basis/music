@@ -15,6 +15,11 @@ class Module
                         $sm->get(MusicTable\ScaleNote::class)
                     );
                 },
+                MusicService\ScaleNote\ScaleNotes\Json::class => function ($sm) {
+                    return new MusicService\ScaleNote\ScaleNotes\Json(
+                        $sm->get(MusicService\ScaleNote\ScaleNotes\GetArray::class),
+                    );
+                },
                 MusicTable\ScaleNote::class => function ($sm) {
                     return new MusicTable\ScaleNote(
                         $sm->get('music')
