@@ -18,6 +18,8 @@ class ScaleNoteTest extends TableTestCase
 
     public function test_selectWhereScaleIdAndOctave()
     {
-        $this->scaleNoteTable->selectWhereScaleIdAndOctave(1, 4);
+        $this->assertEmpty(
+            $this->scaleNoteTable->selectWhereScaleIdAndOctave(1, 4)
+        );
     }
 }

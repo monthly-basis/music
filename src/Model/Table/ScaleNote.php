@@ -19,7 +19,9 @@ class ScaleNote
     ): Result {
         $sql = '
             SELECT *
+
               FROM `scale`
+
               JOIN `scale_note`
              USING (`scale_id`)
 
